@@ -10,10 +10,10 @@ const CONTACT_DETAILS = [
     {
         icon: '📍',
         heading: 'Address',
-        lines: ['142 Ballroom Avenue, Suite 300', 'New York, NY 10001'],
+        lines: ['Some interesting street in Prague, Czech Republic'],
     },
-    { icon: '📞', heading: 'Phone', lines: ['+1 (212) 555-0172'] },
-    { icon: '✉️', heading: 'Email', lines: ['hello@prestigedance.com'] },
+    { icon: '📞', heading: 'Phone', lines: ['+380971911400', '+420606587616'] },
+    { icon: '✉️', heading: 'Email', lines: ['tanyapositko@gmail.com'] },
     {
         icon: '🕐',
         heading: 'Studio Hours',

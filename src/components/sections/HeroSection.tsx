@@ -31,7 +31,23 @@ export default function HeroSection() {
                 playsInline
                 className='absolute inset-0 w-full h-full object-cover object-top'
                 src='/videos/polina.mp4'
-            />
+            />{' '}
+            <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className='absolute inset-0 w-full h-full object-cover'
+            >
+                {/* Desktop — full size */}
+                <source
+                    src='/videos/polina_full_size.mp4'
+                    media='(min-width: 1024px)'
+                    type='video/mp4'
+                />
+                {/* Mobile / tablet — smaller file */}
+                <source src='/videos/polina.mp4' type='video/mp4' />
+            </video>
             <div className='absolute inset-0 bg-black/45' />
             {/* Animated background orbs */}
             <div
@@ -49,7 +65,7 @@ export default function HeroSection() {
                 </p>
 
                 <h1 className='font-display text-[clamp(2.8rem,7vw,5.5rem)] leading-[1.1] mb-6 opacity-0 animate-hero-fade-up [animation-delay:500ms]'>
-                    Dance with
+                    Dance with{' '}
                     <em className='text-gold not-italic'>Elegance,</em>
                     <br />
                     Move with Passion
