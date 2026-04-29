@@ -49,9 +49,8 @@ export default function Navbar() {
                     Prestige{' '}
                     <span className='text-cream italic'>Dance Studio</span>
                 </Link>
-
                 {/* Desktop links */}
-                <ul className='hidden md:flex items-center gap-8 list-none'>
+                <ul className='hidden lg:flex items-center gap-6 xl:gap-8 list-none'>
                     {NAV_LINKS.map(({ href, label }) => (
                         <li key={href}>
                             <Link
@@ -63,19 +62,17 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-
                 <Link
                     href='/#contact'
                     className='hidden md:inline-flex items-center bg-gold text-studio-base font-body text-[0.8rem] font-bold tracking-[0.1em] uppercase px-5 py-2.5 rounded-lg hover:bg-gold-light transition-colors duration-250'
                 >
                     Book a Trial
                 </Link>
-
                 {/* Hamburger */}
                 <button
                     type='button'
                     aria-label='Open menu'
-                    className='flex md:hidden flex-col gap-[5px] cursor-pointer bg-transparent border-0 p-1'
+                    className='flex xl:hidden flex-col gap-[5px] cursor-pointer bg-transparent border-0 p-1'
                     onClick={() => setMobileOpen(true)}
                 >
                     <span className='block w-6 h-0.5 bg-cream transition-all duration-300' />

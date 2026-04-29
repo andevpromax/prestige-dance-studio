@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import FadeUp from '@/components/ui/FadeUp';
 import SectionHeader from '@/components/ui/SectionHeader';
@@ -96,11 +97,25 @@ export default function MomentsCarousel({ moments }: MomentsCarouselProps) {
                                 key={moment.id}
                                 className='swiper-slide !w-[380px] rounded-lg overflow-hidden bg-studio-card border border-gold/10 transition-[border-color,box-shadow] duration-300'
                             >
-                                <div
-                                    className='h-[260px] flex items-center justify-center text-[5rem]'
-                                    style={{ background: moment.gradient }}
-                                >
-                                    {moment.emoji}
+                                <div className='relative h-65 overflow-hidden'>
+                                    {moment.image ? (
+                                        <Image
+                                            src={moment.image}
+                                            alt={moment.title}
+                                            fill
+                                            sizes='380px'
+                                            className='object-cover object-top'
+                                        />
+                                    ) : (
+                                        <div
+                                            className='w-full h-full flex items-center justify-center text-[5rem]'
+                                            style={{
+                                                background: moment.gradient,
+                                            }}
+                                        >
+                                            {moment.emoji}
+                                        </div>
+                                    )}
                                 </div>
                                 <div className='p-7'>
                                     <span className='inline-block text-[0.68rem] tracking-[0.15em] uppercase text-gold border border-gold/35 px-2.5 py-0.5 rounded-full mb-3'>
