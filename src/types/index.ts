@@ -48,6 +48,7 @@ export interface StudioMoment {
     description: string;
     emoji: string;
     gradient: string;
+    image?: string;
 }
 
 export interface HeroStat {
