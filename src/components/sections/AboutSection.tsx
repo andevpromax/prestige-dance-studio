@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import FadeUp from '@/components/ui/FadeUp';
 import SectionHeader from '@/components/ui/SectionHeader';
@@ -29,7 +30,18 @@ export default function AboutSection() {
                 {/* Image placeholder */}
                 <FadeUp>
                     <div className='relative'>
-                        <div
+                        <div className='relative w-full min-h-[420px] aspect-[3/4] overflow-hidden rounded-lg'>
+                            <Image
+                                src='/images/prestige-family.jpg'
+                                alt='Dance couple at Prestige Dance Studio'
+                                fill
+                                className='object-cover object-center'
+                                sizes='(max-width: 768px) 100vw, 50vw'
+                                priority={false}
+                            />
+                            <div className='absolute inset-0 bg-gradient-to-t from-studio-base/60 via-transparent to-transparent' />
+                        </div>
+                        {/* <div
                             className='w-full min-h-[420px] aspect-[3/4] rounded-lg flex items-center justify-center text-[6rem]'
                             style={{
                                 background:
@@ -37,7 +49,7 @@ export default function AboutSection() {
                             }}
                         >
                             💃
-                        </div>
+                        </div> */}
                         <div className='absolute -bottom-5 -right-5 w-40 h-40 rounded-lg bg-gold opacity-[0.12]' />
                         <div className='absolute -top-3 -left-3 right-3 bottom-3 border border-gold/30 rounded-lg pointer-events-none' />
                     </div>
